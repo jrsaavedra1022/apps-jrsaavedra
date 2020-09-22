@@ -18,7 +18,7 @@ def hello(name):
     return render_template(
         'test.html',name=name)
 
-@app.route("/fernando")
+@app.route("/fernando/")
 def fernando():
     return render_template(
         'colchones/index.html'
