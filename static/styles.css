@@ -1,0 +1,260 @@
+.jr-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-gap: 15px;
+    justify-content: center;
+}
+
+.factoryInputs {
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    justify-content: center; 
+}
+
+.jr-product {
+    border-radius: 5px;
+    padding: 10px;
+    background: #FDFEFE;
+}
+
+.factoryInput {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    background: #FDFEFE;
+}
+
+.jr-container-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jr-form {
+    width: 65%;
+}
+
+.jr-hero {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.jr-hero-info {
+    position: absolute;
+    z-index: 10;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: end;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+}
+
+.jr-contact-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jr-info {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    margin-top: 1rem;
+    margin-right: 7rem;
+}
+
+.jr-sub-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.jr-sub-sub-info{
+    width: auto !important;
+}
+
+.jr-icon {
+    padding-left: 1.5rem !important;
+}
+
+.jr-icon-text {
+  padding-left: .3rem !important;  
+  padding-right: .3rem !important;  
+}
+.jr-nowrap{
+    white-space: nowrap;
+}
+
+.colorServices {
+    color: #5DADE2;
+}
+
+.boxServices {
+    max-width: 180px;
+    max-height: 133px;
+    width: 100%;
+}
+
+.appWhatsapp {
+    position: fixed;
+    right: 26px;
+    bottom: 100px;
+    width: 50px;
+    z-index: 1000;
+}
+
+.appWhatsapp img {
+    width: 100%;
+    height: auto;
+}
+
+.top-elements{
+    align-items: baseline;
+}
+
+.boxServices a svg {
+    font-size: 4em !important;
+}
+
+.itemsServices{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 860px;
+}
+
+.itemService {
+    border-right: 1px solid #D7DBDD;
+}
+
+.is-justified-center{
+    justify-content: center;
+}
+
+.hr-size-50 {
+    display: flex;
+    justify-content: center;
+}
+
+.hr-size-50 hr {
+    width: 50%;
+    margin-top: 5rem !important;
+}
+
+
+
+/*responsives media querys*/
+@media screen and (max-width: 1024px){
+    .appWhatsapp {
+        width: 40px;
+    }
+
+}
+@media screen and (max-width: 767px){
+    .jr-info {
+        padding: 5px;
+        margin-right: 2rem;
+    }
+
+    .factoryInputs{
+        grid-template-columns: 1fr;
+    }
+
+    .appWhatsapp {
+        width: 30px;
+    }
+
+    .boxServices {
+        max-width: 100px;
+        max-height: 110px;
+    }
+    .boxServices a svg {
+        font-size: 3em !important;
+    }
+    .boxServices p {
+        font-size: .5rem;
+    }
+
+    .jr-form {
+        width: 77%;
+    }
+    .footer-level.level {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+
+    }
+
+    .footer-level.level .level-item {
+        padding-bottom: 1rem;
+    }
+
+}
+@media  screen and (max-width: 540px) {
+    .jr-form {
+        width: 85%;
+    }
+
+    .jr-products {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .itemsServices {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+    }
+    .itemService{
+        border: none;
+    }
+
+    .jr-info {
+        padding: 5px;
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .itemsServices {
+        grid-gap: 1rem;
+    }
+
+    .jr-form {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 320px){
+    .jr-contact-info{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hr-size-50 hr {
+        width: 50%;
+        margin-top: 1rem !important;
+    }
+
+    .factoryInput {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .jr-form {
+        width: 98%;
+    }
+
+    .footer-level.level {
+        grid-template-columns: 1fr;
+    }
+
+}

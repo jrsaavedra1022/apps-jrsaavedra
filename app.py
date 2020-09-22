@@ -18,7 +18,13 @@ def hello(name):
     return render_template(
         'test.html',name=name)
 
+@app.route("/fernando")
+def fernando():
+    return render_template(
+        'colchones/index.html'
+    )
+
 
 if __name__ == "__main__":
-    app.run("0.0.0.0",debug=False)
-    #app.run("0.0.0.0",debug=True)
+    # app.run("0.0.0.0",debug=False)
+    app.run("127.0.0.1",debug=True)
