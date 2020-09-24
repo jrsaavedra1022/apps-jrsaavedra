@@ -71,4 +71,15 @@
     .itemAnimals {
         padding: 3px;
     }
+
+    .post__likes,
+    .post__comments {
+        width: 40px;
+    }
+
+    .post__overlay p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
