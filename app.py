@@ -4,7 +4,7 @@ from models import ImagesGet
 
 app = Flask(__name__)
 
-CURRENT_ROUTE = os.path.dirname(__file__)
+root = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 
 @app.route("/")
 def index():
@@ -31,16 +31,14 @@ def fernando():
 
 @app.route("/muggly/")
 def betterWorld():
-    global CURRENT_ROUTE
+    global root
     # Obtener imagenes
-    nature = ImagesGet.ls2(CURRENT_ROUTE + "/static/images/nature/")
-    animals = ImagesGet.ls2(CURRENT_ROUTE + "/static/images/animals/")
-    counter=1
+    nature = ImagesGet.ls2(root + "/static/images/nature/")
+    animals = ImagesGet.ls2(root + "/static/images/animals/")
     return render_template(
         'betterWorld/index.html',
         list_animals=animals,
-        list_nature=nature,
-        counter=counter
+        list_nature=nature
     )
 
 
