@@ -1,0 +1,74 @@
+.nature,
+.animals {
+    line-height: 0;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 5px;
+    -moz-column-count: 3;
+    -moz-column-gap: 0px;
+    column-count: 3;
+    column-gap: 0;
+}
+
+.post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.post__overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post__overlay a {
+    color: #fff;
+}
+
+.post__likes,
+.post__comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.post:hover .post__overlay {
+    display: flex;
+}
+
+.itemNature,
+.itemAnimals {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.itemNature img,
+.itemAnimals img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nature,
+    .animals {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 3px;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    .itemAnimals {
+        padding: 3px;
+    }
+}

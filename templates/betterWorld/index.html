@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Mejor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='betterWorld.css')}}">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Paisajes</h1>
+            <div class="nature">
+                {% for element in list_nature %}
+                <div class="itemNature post">
+                    <figure class="image">
+                        <img src="{{url_for('static', filename='images/nature/'+element )}}">
+                    </figure>
+                    <span class="post__overlay">
+                        <p>
+                            <span class="post__likes"><i class="fas fa-heart"></i></span>
+                            <a href="javascript:openModalImage('images/nature/{{ element }}');">
+                                <span class="post__comments"><i class="fas fa-eye"></i></span>
+                            </a>
+                        </p>
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+            <h1 class="title has-text-centered">Animales</h1>
+            <div class="animals">
+                {% for element in list_animals %}
+                <div class="itemAnimals post">
+                    <figure class="image">
+                        <img src="{{url_for('static', filename='images/animals/'+element )}}">
+                    </figure>
+                    <span class="post__overlay">
+                        <p>
+                            <span class="post__likes"><i class="fas fa-heart"></i></span>
+                            <a href="javascript:openModalImage('images/animals/{{ element }}');">
+                                <span class="post__comments"><i class="fas fa-eye"></i></span>
+                            </a>
+                        </p>
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- modal image -->
+    <div class="modal" id="modalImage">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <p class="image is-4by3">
+                <img id="imgModal" src="" alt="">
+            </p>
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="closeModal('modalImage');"></button>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <script>
+    (function() {
+
+    })()
+
+    function closeModal(idModal) {
+        $modal = document.getElementById(idModal);
+        if ($modal) {
+            $modal.classList.remove("is-active");
+        }
+    }
+
+    function openModalImage(urlImage) {
+        $modal = document.getElementById("modalImage");
+        $img = document.getElementById("imgModal");
+        if ($modal) {
+            $img.setAttribute("src", `/static/${urlImage}`);
+            $modal.classList.add("is-active");
+        }
+    }
+    </script>
+</body>
+
+</html>
