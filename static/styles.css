@@ -153,7 +153,14 @@
     margin-top: 5rem !important;
 }
 
+/*icons social networks*/
+.iconInstagram svg {
+    color: #F1948A;
+}
 
+.iconMap svg {
+    color: #27AE60;
+}
 
 /*responsives media querys*/
 @media screen and (max-width: 1024px){
@@ -223,6 +230,7 @@
         padding: 5px;
         margin-left: 1rem;
     }
+
 }
 @media screen and (max-width: 480px){
     .itemsServices {
@@ -231,6 +239,9 @@
 
     .jr-form {
         width: 90%;
+    }
+    .factoryInput .subtitle.is-6 {
+        font-size: .8rem !important;
     }
 }
 @media screen and (max-width: 320px){
@@ -258,3 +269,4 @@
     }
 
 }
+
